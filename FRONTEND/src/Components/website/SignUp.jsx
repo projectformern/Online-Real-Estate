@@ -50,7 +50,7 @@ const SignUp = ({ isAnimating, onClose, onSwitchToSignIn, onSubmit }) => {
 
     if (touched[name]) {
       const error = validateField(name, value, name === 'cfmPassword' ? formData.password : null);
-      setErrors(prev => ({ ...prev, [name]: error }))
+      setErrors(prev => ({ ...prev, [name]: error }));
     }
   }, [touched, formData.password]);
 
