@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  accent-color: black;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  accent-color: black;
+  line-height: 1.5;
+}
+
+/* For Webkit-based Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the vertical scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px; /* Roundness of the scrollbar thumb */
+  background: #17191b; /* Creates space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #17191b; /* Hover color for scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* Color of the scrollbar track */
+  border-radius: 6px; /* Roundness of the scrollbar track */
+}
+
+/* input custome style */
+.input-style {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: rgb(156 163 175 / 1);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: rgb(55 65 81 / 1);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.input-style:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+    calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity, 1));
+}
+
+.label-style {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: rgb(55 65 81 / 1);
+}
+
+/* WEBSITE CSS */
+/* Modal Open Animation */
+.open {
+  animation: openModal 0.8s ease-in-out forwards;
+}
+
+@keyframes openModal {
+  0% {
+    transform: perspective(600px) rotateX(-90deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: perspective(600px) rotateX(10deg) scale(1.05);
+    opacity: 0.8;
+  }
+  70% {
+    transform: perspective(600px) rotateX(-5deg) scale(0.98);
+    opacity: 0.9;
+  }
+  100% {
+    transform: perspective(600px) rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Modal Close Animation */
+.close {
+  animation: closeModal 0.6s ease-in-out forwards;
+}
+
+@keyframes closeModal {
+  0% {
+    transform: perspective(600px) rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: perspective(600px) rotateX(-10deg) scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: perspective(600px) rotateX(90deg) scale(0.5);
+    opacity: 0;
+  }
+}
+.property-card {
+  transition: all 0.3s ease;
+}
+
+.property-card:hover .property-img {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
